@@ -1,0 +1,37 @@
+----------------------------------
+python -m venv venv
+.\venv\Scripts\activate
+start by installing pip install pandas scikit-learn
+----------------------------------
+Dans notre exemple, les caractéristiques utilisées sont l'âge, 
+le nombre de matches joués,le degré de blessure. 
+Le modèle de régression logistique est entraîné sur ces caractéristiques pour prédire si un joueur
+sera blessé ou non. CECI est un exemple très simple, 
+et dans un cas réel, nous devrons utiliser une base de données beaucoup plus grande 
+et plus diversifiée pour obtenir des résultats significatifs
+
+Nous avons crée un ensemble de donnée de 1000 joueurs grace à une fonction random, avec des probabilités de blessure pour l'entrainement
+l'algo nous genere :
+Précision (Precision) :
+
+ La précision mesure la proportion d'instances positives prédites correctement par le modèle parmi toutes 
+ les instances prédites comme positives. C'est le rapport entre les vrais positifs (TP) et la somme des vrais positifs et des faux positifs (FP).
+ Formule : Precision = TP / (TP + FP)
+
+Rappel (Recall) :
+
+    Le rappel mesure la proportion d'instances positives prédites 
+    correctement par le modèle parmi toutes les instances réellement positives. 
+    C'est le rapport entre les vrais positifs (TP) et la somme des vrais positifs et des faux négatifs (FN).
+    Formule : Recall = TP / (TP + FN)
+
+F1-score :
+
+    Le F1-score est la moyenne harmonique de la précision et du rappel. 
+    Il donne une mesure équilibrée entre précision et rappel. Un F1-score élevé indique une bonne performance globale du modèle.
+    Formule : F1-score = 2 * (Precision * Recall) / (Precision + Recall)
+
+Support :
+
+    Le support est le nombre d'occurrences de chaque classe dans l'ensemble de test. 
+    Il indique combien d'instances de chaque classe ont été utilisées pour évaluer le modèle
